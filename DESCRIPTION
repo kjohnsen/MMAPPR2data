@@ -11,5 +11,6 @@ Description: Contains sample data for illustration purposes in the MMAPPR2
 Enhances: MMAPPR2
 License: GPL-3
 Encoding: UTF-8
+biocViews: RNASeqData
 URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3613585/,
     https://github.com/kjohnsen/MMAPPR2
