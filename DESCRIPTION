@@ -9,6 +9,10 @@ Description: Contains sample data for illustration purposes in the MMAPPR2
     package, namely BAM files containing RNA-Seq data for the wild-type
     and mutant pools of the zy14 mutation, as described in Hill et al. (2013).
 Enhances: MMAPPR2
+Suggests: knitr,
+    BiocStyle
+Depends: ExperimentHub,
+    ExperimentHubData
 License: GPL-3
 Encoding: UTF-8
 biocViews: RNASeqData
