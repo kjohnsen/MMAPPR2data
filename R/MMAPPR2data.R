@@ -33,10 +33,12 @@
 #'
 #' @examples
 #' library(ExperimentHub)
+#'
 #' eh <- ExperimentHub()
-#' myfiles <- query(eh, "MMAPPR2data")
-#' myfiles[[1]]        ## load the first resource in the list
-#' myfiles[["zy13wt"]]  ## load by EH id
+#' wtfiles <- listResources(eh, "MMAPPR2data", "wt")
+#' wtfiles[[1]]        ## load the first resource in the list
+#' ## load all mutant files
+#' mutfiles <- loadResources(eh, "MMAPPR2data", "mut")
 #'
 #' ## Files can also be accessed directly like this:
 #' zy13wt() ## data are loaded
