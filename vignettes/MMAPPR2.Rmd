@@ -5,7 +5,7 @@ author:
   affiliation: Brigham Young University, Provo, UT
 package: MMAPPR2data
 output: 
-  BiocStyle::html_document
+  BiocStyle::html_document: default
   BiocStyle::pdf_document: default
 abstract: |
   Instructions on loading BAM files and indices in MMAPPR2data package.
