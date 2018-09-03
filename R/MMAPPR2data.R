@@ -40,7 +40,7 @@
 #'
 #' ## Files can also be accessed directly like this:
 #' zy13wt() ## data are loaded
-#' zy13wt(meta = TRUE)  ## metadata are displayed
+#' zy13wt(metadata = TRUE)  ## metadata are displayed
 #'
 #' @docType package
 #' @aliases zy13wt zy13wtIdx zy13mut zy13mutIdx
