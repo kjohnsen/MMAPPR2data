@@ -13,7 +13,8 @@ Suggests: knitr,
     BiocStyle,
     roxygen2
 Depends: ExperimentHub,
-    ExperimentHubData
+    ExperimentHubData,
+    utils
 License: GPL-3
 Encoding: UTF-8
 biocViews: RNASeqData
