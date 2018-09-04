@@ -8,8 +8,10 @@ Authors@R: c(
 Description: Contains sample data for illustration purposes in the MMAPPR2
     package, namely BAM files containing RNA-Seq data for the wild-type
     and mutant pools of the zy13 mutation, as described in Hill et al. (2013).
+VignetteBuilder: knitr
 Enhances: MMAPPR2
 Suggests: knitr,
+    rmarkdown,
     BiocStyle,
     roxygen2
 Depends: ExperimentHub,
