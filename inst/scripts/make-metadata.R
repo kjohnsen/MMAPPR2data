@@ -29,7 +29,7 @@ meta <- data.frame(
                 'MMAPPR2data/zy13_wt.bam',
                 'MMAPPR2data/zy13_wt.bam.bai'),
     Maintainer='Jonathon Hill jhill@byu.edu',
-    BiocVersion='3.7',
+    BiocVersion='3.8',
     Coordinate_1_based=TRUE,
     DispatchClass='FilePath'
 )
