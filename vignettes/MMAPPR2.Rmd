@@ -32,6 +32,14 @@ zy13mut()
 zy13mutIdx()
 ```
 
+The `downloadAll()` function makes it easy to download all four
+resources at once, which is useful for ensuring indexes are present
+when using the BAM files.
+
+```{r}
+downloadAll()
+```
+
 Or we can access them using the *ExperimentHub* interface:
 
 ```{r}

@@ -7,6 +7,7 @@
 \alias{zy13wtIdx}
 \alias{zy13mut}
 \alias{zy13mutIdx}
+\alias{downloadAll}
 \alias{MMAPPR2data-package}
 \title{MMAPPR2data: Sample Data for MMAPPR2}
 \description{
@@ -22,42 +23,21 @@ See \code{scripts/make-data.sh} for details.
 \details{
 Abbreviations used in resource names:
 wt=wild-type pool, mut=mutant pool, Idx=BAM index.
-
-The package contains the following four resources:
 }
-\section{\code{zy13wt}}{
-
-Contains the path to the BAM file for the wild-type pool
-resulting from the \emph{zy13} cross.
-}
-
-\section{\code{zy13wtIdx}}{
-
-Contains the path to the BAM file index (\code{.bai}) for
-\code{zy13wt}
-}
-
-\section{\code{zy13mut}}{
-
-Contains the path to the BAM file for the mutant pool
-resulting from the \emph{zy13} cross.
-}
-
-\section{\code{zy13mutIdx}}{
-
-Contains the path to the BAM file index (\code{.bai}) for
-\code{zy13mut}
-}
-
 \examples{
 library(ExperimentHub)
+
 eh <- ExperimentHub()
-myfiles <- query(eh, "MMAPPR2data")
-myfiles[[1]]        ## load the first resource in the list
-myfiles[["zy13wt"]]  ## load by EH id
+wtfiles <- listResources(eh, "MMAPPR2data", "wt")
+wtfiles[[1]]        ## load the first resource in the list
+## load all mutant files
+mutfiles <- loadResources(eh, "MMAPPR2data", "mut")
 
 ## Files can also be accessed directly like this:
 zy13wt() ## data are loaded
-zy13wt(meta = TRUE)  ## metadata are displayed
+zy13wt(metadata = TRUE)  ## metadata are displayed
+
+## Download all resources at once:
+downloadAll()
 
 }
