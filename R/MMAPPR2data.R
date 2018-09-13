@@ -29,7 +29,6 @@
 #' @section \code{zy13mutIdx}:
 #' Contains the path to the BAM file index (\code{.bai}) for
 #' \code{zy13mut}
-#' @name MMAPPR2data
 #'
 #' @examples
 #' library(ExperimentHub)
@@ -44,9 +43,28 @@
 #' zy13wt() ## data are loaded
 #' zy13wt(metadata = TRUE)  ## metadata are displayed
 #'
+#'
+#' @name MMAPPR2data
 #' @docType package
-#' @aliases zy13wt zy13wtIdx zy13mut zy13mutIdx
+#' @aliases zy13wt zy13wtIdx zy13mut zy13mutIdx downloadAll
 NULL
+
+
+#' Download All MMAPPR2data Resources at Once
+#'
+#' Use to download all four files at once. Helpful for
+#' ensuring indexes are loaded.
+#'
+#' @export
+#'
+#' @rdname MMAPPR2data
+#' @examples
+#' ## Download all resources at once:
+#' downloadAll()
+downloadAll <- function() {
+    eh <- ExperimentHub::ExperimentHub()
+    ExperimentHub::loadResources(eh, 'MMAPPR2data')
+}
 
 #' @importFrom utils read.csv
 NULL

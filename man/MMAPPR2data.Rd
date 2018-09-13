@@ -7,8 +7,12 @@
 \alias{zy13wtIdx}
 \alias{zy13mut}
 \alias{zy13mutIdx}
+\alias{downloadAll}
 \alias{MMAPPR2data-package}
 \title{MMAPPR2data: Sample Data for MMAPPR2}
+\usage{
+downloadAll()
+}
 \description{
 Contains BAM files and indices for example use in MMAPPR2.
 The \emph{zy13} mutation was identified and mapped using RNA-Seq as
@@ -18,6 +22,9 @@ downloaded from the B2B Consortium's GNomEx datahub and were aligned to
 the GRCz11 genome using HISAT2 and being cut and filtered to include
 only reads on chromosome 7 with high mapping quality.
 See \code{scripts/make-data.sh} for details.
+
+Use to download all four files at once. Helpful for
+ensuring indexes are loaded.
 }
 \details{
 Abbreviations used in resource names:
@@ -51,13 +58,18 @@ Contains the path to the BAM file index (\code{.bai}) for
 
 \examples{
 library(ExperimentHub)
+
 eh <- ExperimentHub()
-myfiles <- query(eh, "MMAPPR2data")
-myfiles[[1]]        ## load the first resource in the list
-myfiles[["zy13wt"]]  ## load by EH id
+wtfiles <- listResources(eh, "MMAPPR2data", "wt")
+wtfiles[[1]]        ## load the first resource in the list
+## load all mutant files
+mutfiles <- loadResources(eh, "MMAPPR2data", "mut")
 
 ## Files can also be accessed directly like this:
 zy13wt() ## data are loaded
-zy13wt(meta = TRUE)  ## metadata are displayed
+zy13wt(metadata = TRUE)  ## metadata are displayed
 
+
+## Download all resources at once:
+downloadAll()
 }
