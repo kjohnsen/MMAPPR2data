@@ -12,7 +12,8 @@
 #' Abbreviations used in resource names:
 #' wt=wild-type pool, mut=mutant pool, Idx=BAM index.
 #'
-#' The package contains the following four resources:
+#' The package contains four resources: the BAM file and its respective
+#' index for each of the wild-type and mutant pools.
 #'
 #' @section \code{zy13wt}:
 #' Contains the path to the BAM file for the wild-type pool
@@ -43,21 +44,16 @@
 #' zy13wt() ## data are loaded
 #' zy13wt(metadata = TRUE)  ## metadata are displayed
 #'
-#'
 #' @name MMAPPR2data
 #' @docType package
 #' @aliases zy13wt zy13wtIdx zy13mut zy13mutIdx downloadAll
 NULL
 
-
-#' Download All MMAPPR2data Resources at Once
-#'
-#' Use to download all four files at once. Helpful for
-#' ensuring indexes are loaded.
-#'
 #' @export
 #'
-#' @rdname MMAPPR2data
+#' @describeIn MMAPPR2data Download all MMAPPR2data resources at once.
+#'   Especially helpful for ensuring BAM indexes are downloaded and
+#'   available when using BAM files.
 #' @examples
 #' ## Download all resources at once:
 #' downloadAll()

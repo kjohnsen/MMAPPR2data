@@ -22,16 +22,21 @@ downloaded from the B2B Consortium's GNomEx datahub and were aligned to
 the GRCz11 genome using HISAT2 and being cut and filtered to include
 only reads on chromosome 7 with high mapping quality.
 See \code{scripts/make-data.sh} for details.
-
-Use to download all four files at once. Helpful for
-ensuring indexes are loaded.
 }
 \details{
 Abbreviations used in resource names:
 wt=wild-type pool, mut=mutant pool, Idx=BAM index.
 
-The package contains the following four resources:
+The package contains four resources: the BAM file and its respective
+index for each of the wild-type and mutant pools.
 }
+\section{Functions}{
+\itemize{
+\item \code{downloadAll}: Download all MMAPPR2data resources at once.
+Especially helpful for ensuring BAM indexes are downloaded and
+available when using BAM files.
+}}
+
 \section{\code{zy13wt}}{
 
 Contains the path to the BAM file for the wild-type pool
@@ -68,7 +73,6 @@ mutfiles <- loadResources(eh, "MMAPPR2data", "mut")
 ## Files can also be accessed directly like this:
 zy13wt() ## data are loaded
 zy13wt(metadata = TRUE)  ## metadata are displayed
-
 
 ## Download all resources at once:
 downloadAll()
