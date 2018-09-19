@@ -7,11 +7,21 @@
 \alias{zy13wtIdx}
 \alias{zy13mut}
 \alias{zy13mutIdx}
-\alias{downloadAll}
+\alias{zy13mutBam}
+\alias{zy13wtBam}
 \alias{MMAPPR2data-package}
 \title{MMAPPR2data: Sample Data for MMAPPR2}
 \usage{
-downloadAll()
+zy13mutBam()
+
+zy13wtBam()
+}
+\value{
+A \code{\link[Rsamtools]{BamFile}} object referencing downloaded
+  BAM file and its index.
+
+A \code{\link[Rsamtools]{BamFile}} object referencing downloaded
+  BAM file and its index.
 }
 \description{
 Contains BAM files and indices for example use in MMAPPR2.
@@ -32,34 +42,16 @@ index for each of the wild-type and mutant pools.
 }
 \section{Functions}{
 \itemize{
-\item \code{downloadAll}: Download all MMAPPR2data resources at once.
-Especially helpful for ensuring BAM indexes are downloaded and
-available when using BAM files.
+\item \code{zy13mutBam}: Download mutant BAM and index files
+simultaneously. This is the
+easiest way to use the data, especially in \link[MMAPPR2]{MMAPPR2}
+examples.
+
+\item \code{zy13wtBam}: Download wild-type BAM and index files
+simultaneously. This is the
+easiest way to use the data, especially in \link[MMAPPR2]{MMAPPR2}
+examples.
 }}
-
-\section{\code{zy13wt}}{
-
-Contains the path to the BAM file for the wild-type pool
-resulting from the \emph{zy13} cross.
-}
-
-\section{\code{zy13wtIdx}}{
-
-Contains the path to the BAM file index (\code{.bai}) for
-\code{zy13wt}
-}
-
-\section{\code{zy13mut}}{
-
-Contains the path to the BAM file for the mutant pool
-resulting from the \emph{zy13} cross.
-}
-
-\section{\code{zy13mutIdx}}{
-
-Contains the path to the BAM file index (\code{.bai}) for
-\code{zy13mut}
-}
 
 \examples{
 library(ExperimentHub)
@@ -74,6 +66,6 @@ mutfiles <- loadResources(eh, "MMAPPR2data", "mut")
 zy13wt() ## data are loaded
 zy13wt(metadata = TRUE)  ## metadata are displayed
 
-## Download all resources at once:
-downloadAll()
+mutFile <- zy13mutBam()
+wtFile <- zy13wtBam()
 }

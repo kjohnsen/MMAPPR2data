@@ -1,0 +1,56 @@
+---
+title: "Using MMAPPR2data Resources"
+author:
+- name: Kyle Johnsen
+  affiliation: Brigham Young University, Provo, UT
+package: MMAPPR2data
+output: 
+  BiocStyle::html_document: default
+  BiocStyle::pdf_document: default
+abstract: |
+  Instructions on loading BAM files and indices in MMAPPR2data package.
+vignette: |
+  %\VignetteIndexEntry{Using MMAPPR2data Resources}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}  
+---
+
+*******************************************************
+
+We first load the `MMAPPR2data` package:
+
+```{r}
+library(MMAPPR2data, quietly = TRUE)
+```
+
+This package contains the following two functions, which
+provide easy access to the BAM files and their indices,
+returning `BamFile` objects:
+
+```{r}
+zy13wtBam()
+zy13mutBam()
+```
+
+Or we can access the four raw files using the *ExperimentHub* interface:
+
+```{r}
+library(ExperimentHub)
+eh <- ExperimentHub()
+wtfiles <- listResources(eh, "MMAPPR2data", "wt")
+wtfiles[[1]]        ## load the first resource in the list
+## load all mutant files:
+mutfiles <- loadResources(eh, "MMAPPR2data", "mut")
+```
+
+For details on the source of these files, and on their construction
+see `?MMAPPR2data` and the scripts:
+
+* `inst/scripts/make-metadata.R`
+* `inst/scripts/make-data.sh`
+
+```{r sessionInfo}
+sessionInfo()
+```
+
+Thanks to Mike Love's `r Biocpkg("alpineData")` package for vignette structure inspiration.

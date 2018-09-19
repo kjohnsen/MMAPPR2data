@@ -15,22 +15,6 @@
 #' The package contains four resources: the BAM file and its respective
 #' index for each of the wild-type and mutant pools.
 #'
-#' @section \code{zy13wt}:
-#' Contains the path to the BAM file for the wild-type pool
-#' resulting from the \emph{zy13} cross.
-#'
-#' @section \code{zy13wtIdx}:
-#' Contains the path to the BAM file index (\code{.bai}) for
-#' \code{zy13wt}
-#'
-#' @section \code{zy13mut}:
-#' Contains the path to the BAM file for the mutant pool
-#' resulting from the \emph{zy13} cross.
-#'
-#' @section \code{zy13mutIdx}:
-#' Contains the path to the BAM file index (\code{.bai}) for
-#' \code{zy13mut}
-#'
 #' @examples
 #' library(ExperimentHub)
 #'
@@ -46,20 +30,37 @@
 #'
 #' @name MMAPPR2data
 #' @docType package
-#' @aliases zy13wt zy13wtIdx zy13mut zy13mutIdx downloadAll
+#' @aliases zy13wt zy13wtIdx zy13mut zy13mutIdx zy13mutBam zy13wtBam
 NULL
 
 #' @export
 #'
-#' @describeIn MMAPPR2data Download all MMAPPR2data resources at once.
-#'   Especially helpful for ensuring BAM indexes are downloaded and
-#'   available when using BAM files.
+#' @describeIn MMAPPR2data Download mutant BAM and index files
+#'   simultaneously. This is the
+#'   easiest way to use the data, especially in \link[MMAPPR2]{MMAPPR2}
+#'   examples.
+#' @return A \code{\link[Rsamtools]{BamFile}} object referencing downloaded
+#'   BAM file and its index.
 #' @examples
-#' ## Download all resources at once:
-#' downloadAll()
-downloadAll <- function() {
+#' mutFile <- zy13mutBam()
+zy13mutBam <- function() {
     eh <- ExperimentHub::ExperimentHub()
-    ExperimentHub::loadResources(eh, 'MMAPPR2data')
+    return(Rsamtools::BamFile(eh[['EH1657']], eh[['EH1658']]))
+}
+
+#' @export
+#'
+#' @describeIn MMAPPR2data Download wild-type BAM and index files
+#'   simultaneously. This is the
+#'   easiest way to use the data, especially in \link[MMAPPR2]{MMAPPR2}
+#'   examples.
+#' @return A \code{\link[Rsamtools]{BamFile}} object referencing downloaded
+#'   BAM file and its index.
+#' @examples
+#' wtFile <- zy13wtBam()
+zy13wtBam <- function() {
+    eh <- ExperimentHub::ExperimentHub()
+    return(Rsamtools::BamFile(eh[['EH1659']], eh[['EH1660']]))
 }
 
 #' @importFrom utils read.csv
