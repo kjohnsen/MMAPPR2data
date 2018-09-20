@@ -45,7 +45,15 @@ NULL
 #' mutFile <- zy13mutBam()
 zy13mutBam <- function() {
     eh <- ExperimentHub::ExperimentHub()
-    return(Rsamtools::BamFile(eh[['EH1657']], eh[['EH1658']]))
+    hubLocation <- AnnotationHub::hubCache(eh)
+    suppressWarnings({
+        file.symlink(file.path(hubLocation, eh[['EH1657']]),
+                     file.path(hubLocation, 'zy13mut.bam'))
+        file.symlink(file.path(hubLocation, eh[['EH1658']]),
+                     file.path(hubLocation, 'zy13mut.bai'))
+    })
+    return(Rsamtools::BamFile(file.path(hubLocation, 'zy13mut.bam'),
+                              file.path(hubLocation, 'zy13mut.bai')))
 }
 
 #' @export
@@ -60,7 +68,15 @@ zy13mutBam <- function() {
 #' wtFile <- zy13wtBam()
 zy13wtBam <- function() {
     eh <- ExperimentHub::ExperimentHub()
-    return(Rsamtools::BamFile(eh[['EH1659']], eh[['EH1660']]))
+    hubLocation <- AnnotationHub::hubCache(eh)
+    suppressWarnings({
+        file.symlink(file.path(hubLocation, eh[['EH1659']]),
+                     file.path(hubLocation, 'zy13wt.bam'))
+        file.symlink(file.path(hubLocation, eh[['EH1660']]),
+                     file.path(hubLocation, 'zy13wt.bai'))
+    })
+    return(Rsamtools::BamFile(file.path(hubLocation, 'zy13wt.bam'),
+                              file.path(hubLocation, 'zy13wt.bai')))
 }
 
 #' @importFrom utils read.csv
