@@ -17,8 +17,7 @@ Suggests: knitr,
 Depends: ExperimentHub,
     ExperimentHubData,
     Rsamtools,
-    AnnotationHub,
-    utils
+    AnnotationHub
 License: GPL-3
 Encoding: UTF-8
 biocViews: RNASeqData,
