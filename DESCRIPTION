@@ -17,6 +17,7 @@ Suggests: knitr,
 Depends: ExperimentHub,
     ExperimentHubData,
     Rsamtools,
+    AnnotationHub,
     utils
 License: GPL-3
 Encoding: UTF-8
