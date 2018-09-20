@@ -2,4 +2,3 @@
 
 export(zy13mutBam)
 export(zy13wtBam)
-importFrom(utils,read.csv)
