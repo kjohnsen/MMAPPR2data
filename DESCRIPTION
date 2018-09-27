@@ -14,7 +14,7 @@ Suggests: knitr,
     rmarkdown,
     BiocStyle,
     roxygen2
-Depends: ExperimentHub,
+Depends: ExperimentHub (>= 1.7.6),
     ExperimentHubData,
     Rsamtools,
     AnnotationHub
