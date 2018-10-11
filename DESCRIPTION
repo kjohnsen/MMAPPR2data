@@ -15,9 +15,7 @@ Suggests: knitr,
     BiocStyle,
     roxygen2
 Depends: ExperimentHub (>= 1.7.6),
-    ExperimentHubData,
-    Rsamtools,
-    AnnotationHub
+    Rsamtools
 License: GPL-3
 Encoding: UTF-8
 biocViews: RNASeqData,
