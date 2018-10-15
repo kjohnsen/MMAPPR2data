@@ -35,7 +35,7 @@ NULL
 #'   simultaneously. This is the
 #'   easiest way to use the data, especially in \link[MMAPPR2]{MMAPPR2}
 #'   examples.
-#' @return A \code{\link[Rsamtools]{BamFile}} object referencing downloaded
+#' @return A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing downloaded
 #'   BAM file and its index.
 #' @examples
 #' mutFile <- zy13mutBam()
