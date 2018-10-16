@@ -17,7 +17,7 @@ zy13mutBam()
 zy13wtBam()
 }
 \value{
-A \code{\link[Rsamtools]{BamFile}} object referencing downloaded
+A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing downloaded
   BAM file and its index.
 
 A \code{\link[Rsamtools]{BamFile}} object referencing downloaded
@@ -61,10 +61,6 @@ wtfiles <- listResources(eh, "MMAPPR2data", "wt")
 wtfiles[[1]]        ## load the first resource in the list
 ## load all mutant files
 mutfiles <- loadResources(eh, "MMAPPR2data", "mut")
-
-## Files can also be accessed directly like this:
-zy13wt() ## data are loaded
-zy13wt(metadata = TRUE)  ## metadata are displayed
 
 mutFile <- zy13mutBam()
 wtFile <- zy13wtBam()
