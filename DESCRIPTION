@@ -1,7 +1,7 @@
 Package: MMAPPR2data
 Type: Package
 Title: Sample Data for MMAPPR2
-Version: 0.99.1
+Version: 0.99.2
 Authors@R: c(
     person("Kyle", "Johnsen", email="kjohnsen@byu.edu", role=c("aut")),
     person("jonathon", "Hill", email="jhill@byu.edu", role=c("cre")))
@@ -14,7 +14,7 @@ Suggests: knitr,
     rmarkdown,
     BiocStyle,
     roxygen2
-Depends: ExperimentHub (>= 1.7.6),
+Imports: ExperimentHub (>= 1.7.6),
     Rsamtools
 License: GPL-3
 Encoding: UTF-8

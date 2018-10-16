@@ -2,6 +2,3 @@
 
 export(zy13mutBam)
 export(zy13wtBam)
-
-import(ExperimentHub)
-import(Rsamtools)
