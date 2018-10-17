@@ -4,7 +4,7 @@ Title: Sample Data for MMAPPR2
 Version: 0.99.4
 Authors@R: c(
     person("Kyle", "Johnsen", email="kjohnsen@byu.edu", role=c("aut")),
-    person("jonathon", "Hill", email="jhill@byu.edu", role=c("cre")))
+    person("Jonathon", "Hill", email="jhill@byu.edu", role=c("cre")))
 Description: Contains sample data for illustration purposes in the MMAPPR2
     package, namely BAM files containing RNA-Seq data for the wild-type
     and mutant pools of the zy13 mutation, as described in Hill et al. (2013).
