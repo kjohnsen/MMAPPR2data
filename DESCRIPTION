@@ -1,7 +1,7 @@
 Package: MMAPPR2data
 Type: Package
 Title: Sample Data for MMAPPR2
-Version: 0.99.2
+Version: 0.99.4
 Authors@R: c(
     person("Kyle", "Johnsen", email="kjohnsen@byu.edu", role=c("aut")),
     person("jonathon", "Hill", email="jhill@byu.edu", role=c("cre")))
@@ -15,7 +15,8 @@ Suggests: knitr,
     BiocStyle,
     roxygen2
 Imports: ExperimentHub (>= 1.7.6),
-    Rsamtools
+    Rsamtools,
+    GenomicRanges
 License: GPL-3
 Encoding: UTF-8
 biocViews: RNASeqData,
