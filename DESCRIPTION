@@ -1,7 +1,7 @@
 Package: MMAPPR2data
 Type: Package
 Title: Sample Data for MMAPPR2
-Version: 0.99.3
+Version: 0.99.4
 Authors@R: c(
     person("Kyle", "Johnsen", email="kjohnsen@byu.edu", role=c("aut")),
     person("jonathon", "Hill", email="jhill@byu.edu", role=c("cre")))
