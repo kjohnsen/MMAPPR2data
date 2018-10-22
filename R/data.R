@@ -9,7 +9,7 @@
 #' the MMAPPR2 package.
 #'
 #' @format A list containing only one element: a
-#' \code{\link[GenomicRanges]{GRanges}} object containing
+#' \code{\link[GenomicRanges:GRanges-class]{GRanges}} object containing
 #' ranked candidate mutations resulting from the \code{generateCandidates}
 #' step of the MMAPPR2 pipeline for chromosome 7.
 "zy13candidates"
