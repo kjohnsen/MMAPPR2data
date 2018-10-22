@@ -33,7 +33,7 @@ NULL
 #'
 #' @describeIn MMAPPR2data Download mutant BAM and index files
 #'   simultaneously. This is the
-#'   easiest way to use the data, especially in \link[MMAPPR2]{MMAPPR2}
+#'   easiest way to use the data, especially in MMAPPR2
 #'   examples.
 #' @return A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing downloaded
 #'   BAM file and its index.
