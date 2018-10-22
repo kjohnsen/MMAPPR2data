@@ -20,7 +20,7 @@ zy13wtBam()
 A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing downloaded
   BAM file and its index.
 
-A \code{\link[Rsamtools]{BamFile}} object referencing downloaded
+A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing downloaded
   BAM file and its index.
 }
 \description{
