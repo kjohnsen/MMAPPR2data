@@ -2,3 +2,4 @@
 
 export(zy13mutBam)
 export(zy13wtBam)
+importFrom(GenomicRanges,GRanges)

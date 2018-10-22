@@ -12,4 +12,6 @@
 #' \code{\link[GenomicRanges:GRanges-class]{GRanges}} object containing
 #' ranked candidate mutations resulting from the \code{generateCandidates}
 #' step of the MMAPPR2 pipeline for chromosome 7.
+#'
+#' @importFrom GenomicRanges GRanges
 "zy13candidates"

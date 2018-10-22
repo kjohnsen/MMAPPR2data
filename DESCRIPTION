@@ -17,7 +17,8 @@ Suggests: knitr,
     roxygen2
 Imports: ExperimentHub (>= 1.7.6),
     Rsamtools,
-    GenomicRanges
+    GenomicRanges,
+    AnnotationHub
 License: GPL-3
 Encoding: UTF-8
 biocViews: RNASeqData,
