@@ -1,5 +1,5 @@
 # SEE BASH SCRIPT FOR ALIGNMENT
-system('bash make-data.sh')
+system2('bash', 'make-data.sh')
 
 library(Rsamtools)
 
