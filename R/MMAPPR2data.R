@@ -1,76 +1,42 @@
 #' MMAPPR2data: Sample Data for MMAPPR2
 #'
 #' Contains BAM files and indices for example use in MMAPPR2.
-#' The \emph{zy13} mutation was identified and mapped using RNA-Seq as
-#' described in Hill et al. in Genome Research (2013).
-#' The \code{.fastq} files for the two pools were
-#' downloaded from the B2B Consortium's GNomEx datahub and were aligned to
-#' the GRCz11 genome using HISAT2 and being cut and filtered to include
-#' only reads on chromosome 7 with high mapping quality.
-#' See \code{scripts/make-data.sh} for details.
-#'
-#' Abbreviations used in resource names:
-#' wt=wild-type pool, mut=mutant pool, Idx=BAM index.
-#'
-#' The package contains four resources: the BAM file and its respective
-#' index for each of the wild-type and mutant pools.
+#' The data is artificial, meant to simulate sequencing of the zebrafish slc24a5
+#' gene in a mutant and a wild-type pool, resulting from a cross of a novel
+#' mutant from a forward genetics screen and a wild-type line, as described in
+#' Hill et al. 2013.
 #'
 #' @examples
-#' library(ExperimentHub)
-#'
-#' eh <- ExperimentHub()
-#' wtfiles <- listResources(eh, "MMAPPR2data", "wt")
-#' wtfiles[[1]]        ## load the first resource in the list
-#' ## load all mutant files
-#' mutfiles <- loadResources(eh, "MMAPPR2data", "mut")
+#' exampleMutBam()
+#' exampleWTbam()
 #'
 #' @name MMAPPR2data
 #' @docType package
-#' @aliases zy13wt zy13wtIdx zy13mut zy13mutIdx zy13mutBam zy13wtBam
+#' @aliases exampleMutBam exampleWTbam
 NULL
 
 #' @export
 #'
-#' @describeIn MMAPPR2data Download mutant BAM and index files
-#'   simultaneously. This is the
-#'   easiest way to use the data, especially in MMAPPR2
-#'   examples.
-#' @return A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing downloaded
-#'   BAM file and its index.
+#' @describeIn MMAPPR2data Easy access to example mutant pool BAM file.
+#' @return A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
+#'   a BAM file and its index.
 #' @examples
-#' mutFile <- zy13mutBam()
-zy13mutBam <- function() {
-    eh <- ExperimentHub::ExperimentHub()
-    hubLocation <- AnnotationHub::hubCache(eh)
-    suppressWarnings({
-        file.symlink(eh[['EH1657']],
-                     file.path(hubLocation, 'zy13mut.bam'))
-        file.symlink(eh[['EH1658']],
-                     file.path(hubLocation, 'zy13mut.bai'))
-    })
-    return(Rsamtools::BamFile(file.path(hubLocation, 'zy13mut.bam'),
-                              file.path(hubLocation, 'zy13mut.bai')))
+#' mutFile <- exampleMutBam()
+exampleMutBam <- function() {
+    dataDir <- system.file('extdata', package='MMAPPR2data')
+    return(Rsamtools::BamFile(file.path(dataDir, 'mut.bam'),
+                              file.path(dataDir, 'mut.bam.bai')))
 }
 
 #' @export
 #'
-#' @describeIn MMAPPR2data Download wild-type BAM and index files
-#'   simultaneously. This is the
-#'   easiest way to use the data, especially in MMAPPR2
-#'   examples.
-#' @return A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing downloaded
-#'   BAM file and its index.
+#' @describeIn MMAPPR2data Easy access to example wild-type pool BAM file.
+#' @return A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
+#'   a BAM file and its index.
 #' @examples
-#' wtFile <- zy13wtBam()
-zy13wtBam <- function() {
-    eh <- ExperimentHub::ExperimentHub()
-    hubLocation <- AnnotationHub::hubCache(eh)
-    suppressWarnings({
-        file.symlink(eh[['EH1659']],
-                     file.path(hubLocation, 'zy13wt.bam'))
-        file.symlink(eh[['EH1660']],
-                     file.path(hubLocation, 'zy13wt.bai'))
-    })
-    return(Rsamtools::BamFile(file.path(hubLocation, 'zy13wt.bam'),
-                              file.path(hubLocation, 'zy13wt.bai')))
+#' wtFile <- exampleWTbam()
+exampleWTbam <- function() {
+    dataDir <- system.file('extdata', package='MMAPPR2data')
+    return(Rsamtools::BamFile(file.path(dataDir, 'wt.bam'),
+                              file.path(dataDir, 'wt.bam.bai')))
 }

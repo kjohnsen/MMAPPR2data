@@ -3,65 +3,40 @@
 \docType{package}
 \name{MMAPPR2data}
 \alias{MMAPPR2data}
-\alias{zy13wt}
-\alias{zy13wtIdx}
-\alias{zy13mut}
-\alias{zy13mutIdx}
-\alias{zy13mutBam}
-\alias{zy13wtBam}
+\alias{exampleMutBam}
+\alias{exampleWTbam}
 \alias{MMAPPR2data-package}
 \title{MMAPPR2data: Sample Data for MMAPPR2}
 \usage{
-zy13mutBam()
+exampleMutBam()
 
-zy13wtBam()
+exampleWTbam()
 }
 \value{
-A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing downloaded
-  BAM file and its index.
+A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
+  a BAM file and its index.
 
-A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing downloaded
-  BAM file and its index.
+A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
+  a BAM file and its index.
 }
 \description{
 Contains BAM files and indices for example use in MMAPPR2.
-The \emph{zy13} mutation was identified and mapped using RNA-Seq as
-described in Hill et al. in Genome Research (2013).
-The \code{.fastq} files for the two pools were
-downloaded from the B2B Consortium's GNomEx datahub and were aligned to
-the GRCz11 genome using HISAT2 and being cut and filtered to include
-only reads on chromosome 7 with high mapping quality.
-See \code{scripts/make-data.sh} for details.
-}
-\details{
-Abbreviations used in resource names:
-wt=wild-type pool, mut=mutant pool, Idx=BAM index.
-
-The package contains four resources: the BAM file and its respective
-index for each of the wild-type and mutant pools.
+The data is artificial, meant to simulate sequencing of the zebrafish slc24a5
+gene in a mutant and a wild-type pool, resulting from a cross of a novel
+mutant from a forward genetics screen and a wild-type line, as described in
+Hill et al. 2013.
 }
 \section{Functions}{
 \itemize{
-\item \code{zy13mutBam}: Download mutant BAM and index files
-simultaneously. This is the
-easiest way to use the data, especially in \link[MMAPPR2]{MMAPPR2}
-examples.
+\item \code{exampleMutBam}: Easy access to example mutant pool BAM file.
 
-\item \code{zy13wtBam}: Download wild-type BAM and index files
-simultaneously. This is the
-easiest way to use the data, especially in \link[MMAPPR2]{MMAPPR2}
-examples.
+\item \code{exampleWTbam}: Easy access to example wild-type pool BAM file.
 }}
 
 \examples{
-library(ExperimentHub)
+exampleMutBam()
+exampleWTbam()
 
-eh <- ExperimentHub()
-wtfiles <- listResources(eh, "MMAPPR2data", "wt")
-wtfiles[[1]]        ## load the first resource in the list
-## load all mutant files
-mutfiles <- loadResources(eh, "MMAPPR2data", "mut")
-
-mutFile <- zy13mutBam()
-wtFile <- zy13wtBam()
+mutFile <- exampleMutBam()
+wtFile <- exampleWTbam()
 }
