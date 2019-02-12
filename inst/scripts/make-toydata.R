@@ -78,7 +78,7 @@ generateSAMdata <- function(readIndex, pos, seq) {
                 tlen, seq, qual))
 }
 
-headers <- '@HD\tVN:1.6\tSO:coordinate\n@SQ\tSN:18\tLN:14083'
+headers <- '@HD\tVN:1.6\tSO:coordinate\n@SQ\tSN:18\tLN:51023478'
 # Create WT pool, use prob function to select which sequence to use
 wtFile <- file(file.path(dataDir, 'wt.sam'), open='w')
 write(headers, wtFile)
