@@ -1,7 +1,7 @@
 Package: MMAPPR2data
 Type: Package
 Title: Sample Data for MMAPPR2
-Version: 0.99.8
+Version: 0.99.9
 Authors@R: c(
     person("Kyle", "Johnsen", email="kjohnsen@byu.edu", role=c("aut")),
     person("Jonathon", "Hill", email="jhill@byu.edu", role=c("cre")))
@@ -14,11 +14,10 @@ Enhances: MMAPPR2
 Suggests: knitr,
     rmarkdown,
     BiocStyle,
-    roxygen2
-Imports: ExperimentHub (>= 1.7.6),
-    Rsamtools,
-    GenomicRanges,
-    AnnotationHub
+    roxygen2,
+    seqinr,
+    readr
+Imports: Rsamtools
 License: GPL-3
 Encoding: UTF-8
 biocViews: RNASeqData,
@@ -28,4 +27,4 @@ biocViews: RNASeqData,
 URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3613585/,
     https://b2b.hci.utah.edu/gnomex/gnomexGuestFlex.jsp?topicNumber=27,
     https://github.com/kjohnsen/MMAPPR2
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
