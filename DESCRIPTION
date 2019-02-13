@@ -17,10 +17,7 @@ Suggests: knitr,
     roxygen2,
     seqinr,
     readr
-Imports: ExperimentHub (>= 1.7.6),
-    Rsamtools,
-    GenomicRanges,
-    AnnotationHub
+Imports: Rsamtools
 License: GPL-3
 Encoding: UTF-8
 biocViews: RNASeqData,
