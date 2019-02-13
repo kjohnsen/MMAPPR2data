@@ -1,9 +1,9 @@
 set.seed(1)
-snpRate <- 0.01
+snpRate <- 0.02
 cov <- 20
 readLen <- 50
-putMutPos <- 5278
-peakRelativeWidth <- 0.1
+putMutPos <- 5494  # should be 5218831 on chromosome
+peakRelativeWidth <- 0.2
 dataDir <- 'inst/extdata'
 
 # Read in fasta
@@ -22,12 +22,12 @@ wtReadPos <- sort(sample(seq(fastaLen - readLen), as.integer(numReads)))
 mutReadPos <- sort(sample(seq(fastaLen - readLen), as.integer(numReads)))
 
 # Divide into pools
-# Need function for probability of read from "mutant strain"
-# being sorted into mutant pool.
-# Should be 1/2 outside of peak, 1 at mutation coordinate
-# 5% of seq length to either side will be 50 centimorgans, so peak should
-# span 10% of total seq
+# 50 centimorgans to either side represents the bottom of the peak,
+# which should be half of the width we want
 fiftyCMspan <- peakRelativeWidth * fastaLen / 2
+
+# Probability of choosing a "mutant" strand will be 1/2 outside of peak,
+# 1 at mutation coordinate
 probMutForMut <- function(coord) {
     if (coord < putMutPos - fiftyCMspan | coord > putMutPos + fiftyCMspan) {
         return(0.5)
