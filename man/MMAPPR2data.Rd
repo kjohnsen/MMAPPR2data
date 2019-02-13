@@ -6,7 +6,7 @@
 \alias{exampleMutBam}
 \alias{exampleWTbam}
 \alias{MMAPPR2data-package}
-\title{MMAPPR2data: Sample Data for MMAPPR2}
+\title{MMAPPR2data: Example Data for MMAPPR2}
 \usage{
 exampleMutBam()
 
@@ -22,8 +22,8 @@ A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
 \description{
 Contains BAM files and indices for example use in MMAPPR2.
 The data is artificial, meant to simulate sequencing of the zebrafish slc24a5
-gene in a mutant and a wild-type pool, resulting from a cross of a novel
-mutant from a forward genetics screen and a wild-type line, as described in
+gene in mutant and wild-type pools resulting from the cross of a novel
+mutant from a forward genetics screen with a wild-type line, as described in
 Hill et al. 2013.
 }
 \section{Functions}{
