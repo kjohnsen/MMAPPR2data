@@ -28,26 +28,12 @@ provide easy access to the BAM files and their indices,
 returning `BamFile` objects:
 
 ```{r}
-zy13wtBam()
-zy13mutBam()
-```
-
-Or we can access the four raw files using the *ExperimentHub* interface:
-
-```{r}
-library(ExperimentHub)
-eh <- ExperimentHub()
-wtfiles <- listResources(eh, "MMAPPR2data", "wt")
-wtfiles[[1]]        ## load the first resource in the list
-## load all mutant files:
-mutfiles <- loadResources(eh, "MMAPPR2data", "mut")
+exampleWTbam()
+exampleMutBam()
 ```
 
 For details on the source of these files, and on their construction
-see `?MMAPPR2data` and the scripts:
-
-* `inst/scripts/make-metadata.R`
-* `inst/scripts/make-data.sh`
+see `?MMAPPR2data` and the `inst/scripts/make-data.R`script.
 
 ```{r sessionInfo}
 sessionInfo()
