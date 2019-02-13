@@ -25,6 +25,5 @@ biocViews: RNASeqData,
     SequencingData,
     ExperimentHub
 URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3613585/,
-    https://b2b.hci.utah.edu/gnomex/gnomexGuestFlex.jsp?topicNumber=27,
     https://github.com/kjohnsen/MMAPPR2
 RoxygenNote: 6.1.1
