@@ -2,3 +2,5 @@
 
 export(exampleMutBam)
 export(exampleWTbam)
+export(goldenFasta)
+export(goldenGTF)

@@ -3,14 +3,20 @@
 \docType{package}
 \name{MMAPPR2data}
 \alias{MMAPPR2data}
+\alias{MMAPPR2data-package}
 \alias{exampleMutBam}
 \alias{exampleWTbam}
-\alias{MMAPPR2data-package}
+\alias{goldenFasta}
+\alias{goldenGTF}
 \title{MMAPPR2data: Example Data for MMAPPR2}
 \usage{
 exampleMutBam()
 
 exampleWTbam()
+
+goldenFasta()
+
+goldenGTF()
 }
 \value{
 A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
@@ -18,6 +24,10 @@ A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
 
 A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
   a BAM file and its index.
+
+A \code{\link[Rsamtools:FaFile]{FaFile}} object
+
+The path to the GTF file
 }
 \description{
 Contains BAM files and indices for example use in MMAPPR2.
@@ -26,17 +36,25 @@ gene in mutant and wild-type pools resulting from the cross of a novel
 mutant from a forward genetics screen with a wild-type line, as described in
 Hill et al. 2013.
 }
+\details{
+Besides BAM files and indices, the package also contains fasta and gtf files
+for just the region of the slc24a5 gene, which are also used in demonstrating
+MMAPPR2's functionality.
+}
 \section{Functions}{
 \itemize{
 \item \code{exampleMutBam}: Easy access to example mutant pool BAM file.
 
 \item \code{exampleWTbam}: Easy access to example wild-type pool BAM file.
+
+\item \code{goldenFasta}: Easy access to example fasta file for slc24a5 gene.
+
+\item \code{goldenGTF}: Easy access to example GTF file for slc24a5 gene.
 }}
 
 \examples{
-exampleMutBam()
-exampleWTbam()
-
 mutFile <- exampleMutBam()
 wtFile <- exampleWTbam()
+goldenFasta <- goldenFasta()
+goldenGTF()
 }

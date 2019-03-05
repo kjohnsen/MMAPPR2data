@@ -6,13 +6,13 @@
 #' mutant from a forward genetics screen with a wild-type line, as described in
 #' Hill et al. 2013.
 #'
-#' @examples
-#' exampleMutBam()
-#' exampleWTbam()
+#' Besides BAM files and indices, the package also contains fasta and gtf files
+#' for just the region of the slc24a5 gene, which are also used in demonstrating
+#' MMAPPR2's functionality. They are based on the GRCz11 assembly and were
+#' obtained from Ensembl version 95.
 #'
 #' @name MMAPPR2data
 #' @docType package
-#' @aliases exampleMutBam exampleWTbam
 NULL
 
 #' @export
@@ -39,4 +39,27 @@ exampleWTbam <- function() {
     dataDir <- system.file('extdata', package='MMAPPR2data')
     return(Rsamtools::BamFile(file.path(dataDir, 'wt.bam'),
                               file.path(dataDir, 'wt.bam.bai')))
+}
+
+#' @export
+#'
+#' @describeIn MMAPPR2data Easy access to example fasta file for slc24a5 gene.
+#' @return A \code{\link[Rsamtools:FaFile]{FaFile}} object
+#' @examples
+#' goldenFasta <- goldenFasta()
+goldenFasta <- function() {
+    dataDir <- system.file('extdata', package='MMAPPR2data')
+    return(Rsamtools::FaFile(file.path(dataDir, 'slc24a5.fa')))
+}
+
+
+#' @export
+#'
+#' @describeIn MMAPPR2data Easy access to example GTF file for slc24a5 gene.
+#' @return The path to the GTF file
+#' @examples
+#' goldenGTF()
+goldenGTF <- function() {
+    dataDir <- system.file('extdata', package='MMAPPR2data')
+    return(file.path(dataDir, 'slc24a5.fa'))
 }
