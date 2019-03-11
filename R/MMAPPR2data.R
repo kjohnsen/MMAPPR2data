@@ -55,11 +55,11 @@ goldenFasta <- function() {
 
 #' @export
 #'
-#' @describeIn MMAPPR2data Easy access to example GTF file for slc24a5 gene.
-#' @return The path to the GTF file
+#' @describeIn MMAPPR2data Easy access to example GFF file for slc24a5 gene.
+#' @return The path to the GFF file
 #' @examples
-#' goldenGTF()
+#' goldenGFF()
 goldenGTF <- function() {
     dataDir <- system.file('extdata', package='MMAPPR2data')
-    return(file.path(dataDir, 'slc24a5.fa'))
+    return(file.path(dataDir, 'slc24a5.gff'))
 }

@@ -27,7 +27,7 @@ A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
 
 A \code{\link[Rsamtools:FaFile]{FaFile}} object
 
-The path to the GTF file
+The path to the GFF file
 }
 \description{
 Contains BAM files and indices for example use in MMAPPR2.
@@ -39,7 +39,8 @@ Hill et al. 2013.
 \details{
 Besides BAM files and indices, the package also contains fasta and gtf files
 for just the region of the slc24a5 gene, which are also used in demonstrating
-MMAPPR2's functionality.
+MMAPPR2's functionality. They are based on the GRCz11 assembly and were
+obtained from Ensembl version 95.
 }
 \section{Functions}{
 \itemize{
@@ -49,12 +50,12 @@ MMAPPR2's functionality.
 
 \item \code{goldenFasta}: Easy access to example fasta file for slc24a5 gene.
 
-\item \code{goldenGTF}: Easy access to example GTF file for slc24a5 gene.
+\item \code{goldenGTF}: Easy access to example GFF file for slc24a5 gene.
 }}
 
 \examples{
 mutFile <- exampleMutBam()
 wtFile <- exampleWTbam()
 goldenFasta <- goldenFasta()
-goldenGTF()
+goldenGFF()
 }
