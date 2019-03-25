@@ -65,7 +65,7 @@ pickMutGivenProb <- function(prob) {
 generateSAMdata <- function(readIndex, pos, seq) {
     qname <- paste0('read', readIndex)
     flag <- 0
-    rname <- 'slc24a5'
+    rname <- '18'
     # because we had problems with the index doing variant calling:
     # posInChr <- 5213338 + pos - 1
     posInChr <- pos
@@ -80,7 +80,7 @@ generateSAMdata <- function(readIndex, pos, seq) {
                 tlen, seq, qual))
 }
 
-headers <- '@HD\tVN:1.6\tSO:coordinate\n@SQ\tSN:slc24a5\tLN:14083'
+headers <- '@HD\tVN:1.6\tSO:coordinate\n@SQ\tSN:18\tLN:14083'
 # Create WT pool, use prob function to select which sequence to use
 wtFile <- file(file.path(dataDir, 'wt.sam'), open='w')
 write(headers, wtFile)
