@@ -7,7 +7,7 @@
 \alias{exampleMutBam}
 \alias{exampleWTbam}
 \alias{goldenFasta}
-\alias{goldenGTF}
+\alias{goldenGFF}
 \title{MMAPPR2data: Example Data for MMAPPR2}
 \usage{
 exampleMutBam()
@@ -16,7 +16,7 @@ exampleWTbam()
 
 goldenFasta()
 
-goldenGTF()
+goldenGFF()
 }
 \value{
 A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
@@ -50,7 +50,7 @@ obtained from Ensembl version 95.
 
 \item \code{goldenFasta}: Easy access to example fasta file for slc24a5 gene.
 
-\item \code{goldenGTF}: Easy access to example GFF file for slc24a5 gene.
+\item \code{goldenGFF}: Easy access to example GFF file for slc24a5 gene.
 }}
 
 \examples{

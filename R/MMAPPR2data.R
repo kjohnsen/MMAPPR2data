@@ -44,22 +44,22 @@ exampleWTbam <- function() {
 #' @export
 #'
 #' @describeIn MMAPPR2data Easy access to example fasta file for slc24a5 gene.
-#' @return A \code{\link[Rsamtools:FaFile]{FaFile}} object
+#' @return A path to the bgzipped slc24a5 fasta file
 #' @examples
 #' goldenFasta <- goldenFasta()
 goldenFasta <- function() {
     dataDir <- system.file('extdata', package='MMAPPR2data')
-    return(Rsamtools::FaFile(file.path(dataDir, 'slc24a5.fa')))
+    return(file.path(dataDir, 'slc24a5.fa.gz'))
 }
 
 
 #' @export
 #'
 #' @describeIn MMAPPR2data Easy access to example GFF file for slc24a5 gene.
-#' @return The path to the GFF file
+#' @return The path to the bgzipped GFF file
 #' @examples
 #' goldenGFF()
 goldenGFF <- function() {
     dataDir <- system.file('extdata', package='MMAPPR2data')
-    return(file.path(dataDir, 'slc24a5.gff'))
+    return(file.path(dataDir, 'slc24a5.gff.gz'))
 }
