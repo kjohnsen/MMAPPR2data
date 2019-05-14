@@ -1,7 +1,7 @@
 Package: MMAPPR2data
 Type: Package
 Title: Sample Data for MMAPPR2
-Version: 0.99.14
+Version: 0.99.15
 Authors@R: c(
     person("Kyle", "Johnsen", email="kjohnsen@byu.edu", role=c("aut")),
     person("Jonathon", "Hill", email="jhill@byu.edu", role=c("cre")))
@@ -21,10 +21,7 @@ Suggests: knitr,
 Imports: Rsamtools
 License: GPL-3
 Encoding: UTF-8
-biocViews: RNASeqData,
-    ExperimentData,
-    SequencingData,
-    ExperimentHub
+biocViews: RNASeqData
 URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3613585/,
     https://github.com/kjohnsen/MMAPPR2
 RoxygenNote: 6.1.1
