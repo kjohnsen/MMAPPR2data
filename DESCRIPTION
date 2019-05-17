@@ -1,7 +1,7 @@
 Package: MMAPPR2data
 Type: Package
 Title: Sample Data for MMAPPR2
-Version: 0.99.15
+Version: 0.99.16
 Authors@R: c(
     person("Kyle", "Johnsen", email="kjohnsen@byu.edu", role=c("aut")),
     person("Jonathon", "Hill", email="jhill@byu.edu", role=c("cre")))
@@ -9,7 +9,7 @@ Description: Contains data for illustration purposes in the MMAPPR2
     package, namely simulated BAM files containing RNA-Seq data for a mutation
     in the slc24a5 gene, taken from the GRCz11 genome. Also contains reference
     sequence and annotation files for the region.
-Depends: R (>= 3.5.0)
+Depends: R (>= 3.6.0)
 VignetteBuilder: knitr
 Enhances: MMAPPR2
 Suggests: knitr,
@@ -21,7 +21,10 @@ Suggests: knitr,
 Imports: Rsamtools
 License: GPL-3
 Encoding: UTF-8
-biocViews: RNASeqData
+biocViews: RNASeqData,
+    Danio_rerio_Data,
+    SequencingData,
+    Genome
 URL: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3613585/,
     https://github.com/kjohnsen/MMAPPR2
 RoxygenNote: 6.1.1
