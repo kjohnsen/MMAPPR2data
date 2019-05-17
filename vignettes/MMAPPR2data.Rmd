@@ -39,4 +39,5 @@ see `?MMAPPR2data` and the `inst/scripts/make-data.R`script.
 sessionInfo()
 ```
 
-Thanks to Mike Love's `r Biocpkg("alpineData")` package for vignette structure inspiration.
+Thanks to Mike Love's `r Biocpkg("alpineData")` package for
+vignette structure inspiration.
