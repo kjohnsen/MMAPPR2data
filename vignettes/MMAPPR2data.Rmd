@@ -33,7 +33,7 @@ exampleMutBam()
 ```
 
 For details on the source of these files, and on their construction
-see `?MMAPPR2data` and the `inst/scripts/make-data.R`script.
+see `?MMAPPR2data` and the `inst/scripts/`folder.
 
 ```{r sessionInfo}
 sessionInfo()
