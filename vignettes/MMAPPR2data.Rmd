@@ -32,6 +32,14 @@ exampleWTbam()
 exampleMutBam()
 ```
 
+Annotation data for the region is also included with the package and can
+be accessed with these two functions:
+
+```{r}
+goldenFasta()
+goldenGFF()
+```
+
 For details on the source of these files, and on their construction
 see `?MMAPPR2data` and the `inst/scripts/`folder.
 
