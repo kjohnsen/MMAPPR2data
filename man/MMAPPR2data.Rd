@@ -25,9 +25,9 @@ A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
 A \code{\link[Rsamtools:BamFile-class]{BamFile}} object referencing
   a BAM file and its index.
 
-A \code{\link[Rsamtools:FaFile]{FaFile}} object
+A path to the bgzipped slc24a5 fasta file
 
-The path to the GFF file
+The path to the bgzipped GFF file
 }
 \description{
 Contains BAM files and indices for example use in MMAPPR2.
